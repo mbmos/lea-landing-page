@@ -4,92 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEA Academy Kisangani - Formation Anglais 100% Audio | De A0 à C2 en 90 Jours</title>
-
-    <!-- SEO Meta Tags -->
+    <title>LEA Academy - Parlez Anglais avec Confiance en 3 Mois | Kisangani</title>
     <meta name="description"
-        content="LEA Academy Kisangani - Formation anglais 100% audio et pratique. De A0 à C2 en 90 jours. Accédez aux ONG, commerce international, freelancing. Paiement M-Pesa/Orange Money. 5 experts locaux.">
-    <meta name="keywords"
-        content="formation anglais Kisangani, apprendre anglais RDC, LEA Academy, cours anglais audio, ONG Kisangani, commerce international, freelancing Congo">
-    <meta name="author" content="LEA Academy">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lea-academy-kisangani.com/">
-    <meta property="og:title" content="LEA Academy - L'anglais n'est pas une matière, c'est votre futur revenu">
-    <meta property="og:description"
-        content="La première méthode 100% audio conçue par 5 experts de Kisangani. Transformez votre téléphone en école d'anglais.">
-    <meta property="og:image"
-        content="https://images.unsplash.com/photo-1577401132921-cb398fae3c5c?w=1200&h=630&fit=crop">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="LEA Academy Kisangani - Formation Anglais 100% Audio">
-    <meta property="twitter:description"
-        content="De A0 à C2 en 90 jours. Accédez aux ONG, commerce international, freelancing.">
-    <meta property="twitter:image"
-        content="https://images.unsplash.com/photo-1577401132921-cb398fae3c5c?w=1200&h=630&fit=crop">
-
-    <!-- Tailwind CSS -->
+        content="Rejoignez Learning English Academy (LEA). Formation d'anglais parlé 100% en ligne via Telegram. De A0 à C2 en 3 mois. 5 experts. Résultats garantis.">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
 
-        /* Chart Container Styling - MANDATORY */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-            margin-left: auto;
-            margin-right: auto;
+        .gradient-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #065f46 100%);
         }
 
-        @media (max-width: 768px) {
-            .chart-container {
-                height: 300px;
-            }
+        .gradient-cta {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         }
 
-        /* Hero Background */
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(6, 78, 59, 0.9) 100%),
-                url('https://images.unsplash.com/photo-1577401132921-cb398fae3c5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
 
         @keyframes pulse {
@@ -100,737 +36,454 @@
             }
 
             50% {
-                opacity: 0.7;
+                opacity: .7;
             }
         }
 
-        @keyframes bounce-subtle {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-5px);
-            }
+        .hover-lift {
+            transition: transform 0.3s;
         }
 
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .pulse-animation {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .bounce-on-hover:hover {
-            animation: bounce-subtle 0.5s ease-in-out;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .mobile-menu.active {
-            max-height: 500px;
-        }
-
-        /* FAQ Accordion */
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .faq-answer.active {
-            max-height: 300px;
-        }
-
-        /* Scroll reveal */
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .rotate-180 {
-            transform: rotate(180deg);
+        .hover-lift:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-slate-800 antialiased">
+<body class="antialiased">
 
-    <!-- Navigation -->
-    <nav
-        class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-2">
-                    <div
-                        class="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                        L</div>
-                    <div class="leading-tight">
-                        <span class="block font-bold text-blue-900 text-lg tracking-tight">LEA ACADEMY</span>
-                        <span class="block text-xs text-green-600 font-semibold tracking-wider">KISANGANI</span>
-                    </div>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#programme" class="text-slate-600 hover:text-blue-900 font-medium transition">Programme</a>
-                    <a href="#experts" class="text-slate-600 hover:text-blue-900 font-medium transition">Experts</a>
-                    <a href="#temoignages"
-                        class="text-slate-600 hover:text-blue-900 font-medium transition">Témoignages</a>
-                    <a href="#roi" class="text-slate-600 hover:text-blue-900 font-medium transition">ROI</a>
-                    <a href="#faq" class="text-slate-600 hover:text-blue-900 font-medium transition">FAQ</a>
-                </div>
-
-                <!-- CTA Button (Desktop) -->
-                <a href="#pricing"
-                    class="hidden md:block bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 text-sm bounce-on-hover">
-                    Rejoindre (Jan 2026)
-                </a>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden text-blue-900 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                        <path id="closeIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="mobile-menu md:hidden">
-                <div class="py-4 space-y-3">
-                    <a href="#programme"
-                        class="block text-slate-600 hover:text-blue-900 font-medium transition py-2">Programme</a>
-                    <a href="#experts"
-                        class="block text-slate-600 hover:text-blue-900 font-medium transition py-2">Experts</a>
-                    <a href="#temoignages"
-                        class="block text-slate-600 hover:text-blue-900 font-medium transition py-2">Témoignages</a>
-                    <a href="#roi" class="block text-slate-600 hover:text-blue-900 font-medium transition py-2">ROI</a>
-                    <a href="#faq" class="block text-slate-600 hover:text-blue-900 font-medium transition py-2">FAQ</a>
-                    <a href="#pricing"
-                        class="block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-bold text-center mt-4">
-                        Rejoindre (Jan 2026)
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-bg pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto text-center relative z-10">
+    <!-- HERO -->
+    <section class="gradient-hero min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="max-w-4xl mx-auto text-center text-white">
             <div
-                class="inline-block bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1 mb-6 pulse-animation">
-                <span class="text-green-300 font-bold text-sm uppercase tracking-wider"> <i
-                        class="fas fa-bolt mr-2"></i> Session de Janvier Ouverte</span>
-            </div>
-
-            <!-- Urgency Timer -->
-            <div
-                class="inline-flex items-center gap-4 bg-red-500/90 backdrop-blur-md text-white px-6 py-3 rounded-full mb-6 shadow-lg">
+                class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6 pulse">
                 <i class="fas fa-fire text-yellow-300"></i>
-                <span class="font-bold text-sm">Places restantes : <span
-                        class="text-yellow-300 text-lg">12/30</span></span>
-                <span class="text-white/60">|</span>
-                <span class="font-semibold text-sm">Fermeture dans : <span id="countdown"
-                        class="text-yellow-300 font-mono">--</span></span>
+                <span class="font-bold text-sm">Places limitées : 12/30 restantes</span>
             </div>
-            <h1
-                class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-sm fade-in-up">
-                L'anglais n'est pas une matière.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">C'est votre
-                    futur revenu.</span>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
+                Parlez Anglais avec Confiance<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">en 3
+                    Mois</span>
             </h1>
-            <p class="text-lg md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto font-light leading-relaxed fade-in-up"
-                style="animation-delay: 0.2s;">
-                La première méthode <strong>100% audio & pratique</strong> conçue par 5 experts de Kisangani pour les
-                commerçants, cadres et étudiants. Transformez votre téléphone en école.
+
+            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Sans quitter Kisangani. Sans salle de classe. <strong>100% en ligne via Telegram.</strong><br>
+                De A0 à C2 avec 5 experts qui comprennent votre réalité.
             </p>
 
-            <!-- Trust Badges -->
-            <div class="flex flex-wrap justify-center gap-6 mb-10 fade-in-up" style="animation-delay: 0.3s;">
+            <p class="text-lg text-green-200 mb-10 italic max-w-2xl mx-auto">
+                L'anglais n'est pas une matière scolaire. C'est la clé qui ouvre les portes des ONG, du commerce
+                international et des opportunités que vous méritez.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
                 <div
-                    class="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2">
+                    class="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-2">
                     <i class="fas fa-users text-green-300"></i>
-                    <span class="text-white font-semibold text-sm">+150 élèves formés</span>
+                    <span class="font-semibold text-sm">+150 élèves formés</span>
                 </div>
                 <div
-                    class="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2">
+                    class="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-2">
                     <i class="fas fa-star text-yellow-300"></i>
-                    <span class="text-white font-semibold text-sm">94% de réussite</span>
+                    <span class="font-semibold text-sm">94% de réussite</span>
                 </div>
                 <div
-                    class="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2">
+                    class="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-2">
                     <i class="fas fa-shield-alt text-blue-300"></i>
-                    <span class="text-white font-semibold text-sm">Garantie 7 jours</span>
+                    <span class="font-semibold text-sm">Garantie 7 jours</span>
                 </div>
             </div>
-            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up" style="animation-delay: 0.4s;">
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#pricing"
-                    class="bg-green-500 hover:bg-green-400 text-white text-lg font-bold py-4 px-10 rounded-xl shadow-xl hover:shadow-2xl transition transform hover:scale-105 flex items-center justify-center bounce-on-hover">
-                    Commencer Maintenant <i class="fas fa-arrow-right ml-3"></i>
+                    class="gradient-cta text-white text-lg font-bold py-4 px-10 rounded-xl shadow-2xl hover:shadow-green-500/50 transition transform hover:scale-105 inline-flex items-center justify-center">
+                    <i class="fas fa-rocket mr-2"></i> Commencer Mon Anglais Parlé
                 </a>
-                <a href="#programme"
-                    class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white text-lg font-semibold py-4 px-10 rounded-xl transition flex items-center justify-center">
-                    Voir le Programme
+                <a href="https://wa.me/243817748941"
+                    class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white text-lg font-semibold py-4 px-10 rounded-xl transition inline-flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Parler à un Conseiller
                 </a>
-            </div>
-
-            <!-- Mobile Money Badges -->
-            <div class="mt-12 pt-8 border-t border-white/10 flex justify-center items-center gap-8 opacity-80">
-                <div class="flex items-center gap-2 text-white font-semibold">
-                    <span class="bg-orange-500 w-3 h-3 rounded-full"></span> Orange Money
-                </div>
-                <div class="flex items-center gap-2 text-white font-semibold">
-                    <span class="bg-yellow-400 w-3 h-3 rounded-full"></span> M-Pesa
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Data Visualization Section: The ROI of English -->
-    <section id="roi" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-                <!-- Narrative -->
-                <div>
-                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Pourquoi apprendre avec LEA est un <span
-                            class="text-green-600">Investissement</span> ?</h2>
-                    <p class="text-lg text-slate-600 mb-6">
-                        À Kisangani, la différence entre un salaire local et un revenu international (ONG, Commerce
-                        Import-Export) est massive. Nos données montrent l'impact de l'anglais sur 3 ans.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div
-                                class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl font-bold">
-                                1
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-bold text-slate-800">Accès aux ONG</h3>
-                                <p class="text-slate-500">Postulez à la MONUSCO ou aux parcs (Garamba) avec un CV en
-                                    anglais béton.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div
-                                class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl font-bold">
-                                2
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-xl font-bold text-slate-800">Commerce sans Frontières</h3>
-                                <p class="text-slate-500">Négociez directement avec Dubaï ou Kampala sans intermédiaire
-                                    coûteux.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chart -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-inner">
-                    <h3 class="text-center font-bold text-slate-700 mb-4">Projection de Revenus Mensuels (Estimations
-                        Kisangani)</h3>
-                    <div class="chart-container">
-                        <canvas id="incomeChart"></canvas>
-                    </div>
-                    <p class="text-xs text-center text-slate-400 mt-4 italic">Source: Analyse du marché local de
-                        l'emploi & opportunités freelance (2024).</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- The Team Section -->
-    <section id="experts" class="py-20 bg-slate-50 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- VALEUR -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">L'Équipe LEA</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mt-2">5 Experts, 1 Mission</h2>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Ce Que Vous Allez Maîtriser</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-2xl hover:shadow-xl transition hover-lift">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Parler sans peur</h3>
+                    <p class="text-gray-600">Converser naturellement en anglais dès le 1er mois.</p>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-2xl hover:shadow-xl transition hover-lift">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-briefcase text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Travailler en anglais</h3>
+                    <p class="text-gray-600">Emails, réunions, négociations professionnelles.</p>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-2xl hover:shadow-xl transition hover-lift">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-tie text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Décrocher des postes</h3>
+                    <p class="text-gray-600">ONG (MONUSCO, Garamba), organisations internationales.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#pricing"
+                    class="gradient-cta text-white text-lg font-bold py-4 px-10 rounded-xl shadow-xl hover:shadow-green-500/50 transition transform hover:scale-105 inline-flex items-center">
+                    <i class="fas fa-check mr-2"></i> Je M'inscris Maintenant
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- POUR QUI -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">LEA Est Fait Pour Vous Si...</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Étudiant(e)</h3>
+                    <p class="text-gray-600">Décrocher une bourse, réussir vos examens, être à l'aise avec les profs
+                        expatriés.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Professionnel(le)</h3>
+                    <p class="text-gray-600">Viser un poste dans une ONG ou entreprise internationale.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                    <div class="text-4xl mb-4">🛍️</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Commerçant(e)</h3>
+                    <p class="text-gray-600">Négocier directement avec Dubaï, Kampala sans intermédiaire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMME -->
+    <section id="programme" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Votre Parcours en 3 Mois</h2>
+                <p class="text-xl text-gray-600">De "I don't speak English" à "Let's discuss business"</p>
+                <div class="w-24 h-1 bg-green-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-blue-50 p-8 rounded-2xl border-t-4 border-blue-500 hover-lift">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-2">Mois 1</h3>
+                    <p class="text-blue-600 font-semibold mb-4">FOUNDATIONS</p>
+                    <p class="text-gray-700 mb-4 italic">"Briser la glace"</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Phonétique
+                            (R, H, TH)</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Se présenter
+                            avec confiance</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Situations
+                            quotidiennes</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-8 rounded-2xl border-t-4 border-blue-700 hover-lift">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-2">Mois 2</h3>
+                    <p class="text-blue-600 font-semibold mb-4">COMMUNICATION</p>
+                    <p class="text-gray-700 mb-4 italic">"Travailler en anglais"</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Emails &
+                            WhatsApp Pro</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Accueillir
+                            une délégation</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> Small talk
+                            professionnel</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-blue-900 to-blue-800 p-8 rounded-2xl text-white border-t-4 border-green-400 hover-lift transform scale-105">
+                    <div
+                        class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        POPULAIRE</div>
+                    <h3 class="text-2xl font-bold mb-2">Mois 3</h3>
+                    <p class="text-green-300 font-semibold mb-4">MASTERY</p>
+                    <p class="text-blue-200 mb-4 italic">"Monétiser votre talent"</p>
+                    <ul class="space-y-2 text-blue-100">
+                        <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-2"></i> Négociation &
+                            Contrats</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-2"></i> Leadership &
+                            Réunions</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-2"></i> Freelancing
+                            (Upwork)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉQUIPE -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">5 Experts. 1 Mission.</h2>
+                <p class="text-xl text-gray-600">Des formateurs qui vivent l'anglais et comprennent vos défis</p>
                 <div class="w-24 h-1 bg-green-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- Expert 1 -->
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center">
                     <div
                         class="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
                         👨🏾‍🏫</div>
                     <h3 class="font-bold text-lg text-blue-900">Joël Kitoko</h3>
                     <p class="text-sm text-green-600 font-semibold mb-2">Lead Trainer</p>
-                    <p class="text-xs text-slate-500">Spécialiste Phonétique & Coaching Vocal.</p>
+                    <p class="text-xs text-gray-500">Phonétique & Coaching Vocal</p>
                 </div>
-                <!-- Expert 2 -->
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center">
                     <div
                         class="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
                         👨🏾‍💼</div>
                     <h3 class="font-bold text-lg text-blue-900">E. Mbaruku</h3>
                     <p class="text-sm text-green-600 font-semibold mb-2">Business English</p>
-                    <p class="text-xs text-slate-500">Expert en négociation et commerce.</p>
+                    <p class="text-xs text-gray-500">Négociation & Commerce</p>
                 </div>
-                <!-- Expert 3 -->
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center">
                     <div
                         class="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
                         🕵🏾‍♂️</div>
                     <h3 class="font-bold text-lg text-blue-900">F. Akanisi</h3>
                     <p class="text-sm text-green-600 font-semibold mb-2">Logistique</p>
-                    <p class="text-xs text-slate-500">Anglais aéroportuaire et technique.</p>
+                    <p class="text-xs text-gray-500">Anglais Technique</p>
                 </div>
-                <!-- Expert 4 -->
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center">
                     <div
                         class="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
                         🎤</div>
-                    <h3 class="font-bold text-lg text-blue-900">Elijah Assani</h3>
+                    <h3 class="font-bold text-lg text-blue-900">E. Assani</h3>
                     <p class="text-sm text-green-600 font-semibold mb-2">Communication</p>
-                    <p class="text-xs text-slate-500">Art oratoire et Pitching.</p>
+                    <p class="text-xs text-gray-500">Art Oratoire</p>
                 </div>
-                <!-- Expert 5 -->
-                <div
-                    class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition text-center border border-slate-100">
+
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center">
                     <div
                         class="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
                         🎓</div>
                     <h3 class="font-bold text-lg text-blue-900">R. Banonoko</h3>
                     <p class="text-sm text-green-600 font-semibold mb-2">Académique</p>
-                    <p class="text-xs text-slate-500">Préparation aux tests et bourses.</p>
+                    <p class="text-xs text-gray-500">TOEFL & Bourses</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="temoignages" class="py-20 bg-white scroll-reveal">
-        <div class="max-w-7xl mx-auto px-4">
+    <!-- TARIFS -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-green-600 font-bold tracking-wider uppercase text-sm">Témoignages</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mt-2">Ce que disent nos élèves</h2>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Investissez Dans Votre Futur</h2>
+                <p class="text-xl text-gray-600">Un cours classique coûte 50-100$/mois. Pour un résultat médiocre.</p>
                 <div class="w-24 h-1 bg-green-500 mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition">
-                    <div class="flex items-center gap-1 mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-slate-700 mb-6 italic">"Grâce à LEA, j'ai décroché un poste de traducteur à la
-                        MONUSCO. Mon salaire a triplé en 6 mois. La méthode audio m'a permis d'apprendre même en
-                        moto-taxi !"</p>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold">
-                            JM
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800">Jean-Marie K.</h4>
-                            <p class="text-sm text-slate-500">Traducteur MONUSCO</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div
-                    class="bg-gradient-to-br from-blue-900 to-blue-800 p-8 rounded-2xl shadow-xl text-white transform scale-105">
-                    <div class="flex items-center gap-1 mb-4">
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                        <i class="fas fa-star text-yellow-300"></i>
-                    </div>
-                    <p class="text-blue-100 mb-6 italic">"Je négocie maintenant directement avec mes fournisseurs à
-                        Dubaï. Plus besoin d'intermédiaire ! J'économise 30% sur chaque commande. LEA a changé mon
-                        business."</p>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
-                            SM
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Sarah M.</h4>
-                            <p class="text-sm text-blue-200">Commerçante Import-Export</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition">
-                    <div class="flex items-center gap-1 mb-4">
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                        <i class="fas fa-star text-yellow-400"></i>
-                    </div>
-                    <p class="text-slate-700 mb-6 italic">"J'ai obtenu une bourse pour le Canada après 3 mois avec LEA.
-                        Le module académique m'a préparé au TOEFL. Merci à toute l'équipe !"</p>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold">
-                            DL
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800">David L.</h4>
-                            <p class="text-sm text-slate-500">Étudiant - Bourse Canada</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Curriculum Section -->
-    <section id="programme" class="py-20 max-w-6xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-blue-900">Le Parcours de 90 Jours</h2>
-            <p class="text-slate-600 mt-2">De A0 (Débutant) à C2 (Pro) en 3 sprints intensifs.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Month 1 -->
-            <div
-                class="bg-white rounded-2xl shadow-lg border-t-4 border-blue-500 overflow-hidden hover:-translate-y-2 transition duration-300">
-                <div class="bg-blue-50 p-6">
-                    <h3 class="text-2xl font-bold text-blue-900">Mois 1</h3>
-                    <p class="text-blue-600 font-semibold">Fondamental (A0-A1)</p>
-                </div>
-                <div class="p-6">
-                    <p class="text-sm text-slate-500 mb-4 italic">"Brisez le silence."</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> Phonétique & Sons (R, H, TH)</li>
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> L'art d'épeler (Pro)</li>
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> Elevator Pitch (Se présenter)</li>
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> Survie (Marché, Taxi, Hôtel)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Month 2 -->
-            <div
-                class="bg-white rounded-2xl shadow-lg border-t-4 border-blue-700 overflow-hidden hover:-translate-y-2 transition duration-300">
-                <div class="bg-blue-50 p-6">
-                    <h3 class="text-2xl font-bold text-blue-900">Mois 2</h3>
-                    <p class="text-blue-600 font-semibold">Fonctionnel (A2-B1)</p>
-                </div>
-                <div class="p-6">
-                    <p class="text-sm text-slate-500 mb-4 italic">"Travaillez en anglais."</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> E-mails & WhatsApp Pro</li>
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> Accueillir une délégation</li>
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> Small Talk (Restaurant)</li>
-                        <li class="flex items-start text-sm text-slate-700"><i
-                                class="fas fa-check text-green-500 mt-1 mr-2"></i> Rapports d'activités</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Month 3 -->
-            <div
-                class="bg-blue-900 rounded-2xl shadow-xl border-t-4 border-green-400 overflow-hidden transform scale-105 hover:-translate-y-2 transition duration-300 relative">
-                <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                    POPULAIRE</div>
-                <div class="bg-blue-800 p-6">
-                    <h3 class="text-2xl font-bold text-white">Mois 3</h3>
-                    <p class="text-green-300 font-semibold">Business & Cash (B2-C2)</p>
-                </div>
-                <div class="p-6">
-                    <p class="text-sm text-blue-200 mb-4 italic">"Monétisez votre talent."</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start text-sm text-white"><i
-                                class="fas fa-check text-green-400 mt-1 mr-2"></i> Négociation & Contrats</li>
-                        <li class="flex items-start text-sm text-white"><i
-                                class="fas fa-check text-green-400 mt-1 mr-2"></i> Leadership & Réunions</li>
-                        <li class="flex items-start text-sm text-white"><i
-                                class="fas fa-check text-green-400 mt-1 mr-2"></i> Interprétation & Fixeur</li>
-                        <li class="flex items-start text-sm text-white"><i
-                                class="fas fa-check text-green-400 mt-1 mr-2"></i> Freelancing (Upwork/Fiverr)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-blue-900">Tarifs Accessibles</h2>
-                <p class="text-slate-600">Paiement unique. Accès à vie aux PDF.</p>
-            </div>
-
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Standard -->
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-700">Module Unique</h3>
-                    <div class="my-4">
-                        <span class="text-4xl font-extrabold text-blue-900">$25</span>
-                        <span class="text-slate-500">/ mois</span>
+                <div class="bg-white rounded-2xl shadow-lg border-2 border-gray-200 p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Module Unique</h3>
+                    <div class="mb-4">
+                        <span class="text-5xl font-black text-blue-900">25$</span>
+                        <span class="text-gray-500">/mois</span>
                     </div>
-                    <p class="text-sm text-slate-500 mb-8">Idéal pour tester la méthode.</p>
-                    <button onclick="openModal('Standard', '25$')"
-                        class="mt-auto w-full py-4 rounded-xl border-2 border-blue-900 text-blue-900 font-bold hover:bg-blue-50 transition">
+                    <p class="text-gray-600 mb-6">Idéal pour tester la méthode</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> <span
+                                class="text-gray-700">1 mois de formation</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> <span
+                                class="text-gray-700">Audios, vidéos, PDF</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-2"></i> <span
+                                class="text-gray-700">Groupe Telegram</span></li>
+                    </ul>
+                    <button onclick="openModal('Module Unique', '25$')"
+                        class="w-full py-4 rounded-xl border-2 border-blue-900 text-blue-900 font-bold hover:bg-blue-50 transition">
                         Choisir ce pack
                     </button>
                 </div>
 
-                <!-- Premium -->
                 <div
-                    class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl shadow-xl p-8 flex flex-col relative text-white">
+                    class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl shadow-2xl p-8 text-white transform scale-105 relative">
                     <div class="absolute top-4 right-4 bg-green-500 px-3 py-1 rounded-full text-xs font-bold">ÉCONOMISEZ
                         15$</div>
-                    <h3 class="text-xl font-bold text-blue-100">Full Master (3 Mois)</h3>
-                    <div class="my-4">
-                        <span class="text-4xl font-extrabold text-white">$60</span>
-                        <span class="text-blue-200 line-through text-lg ml-2">$75</span>
+                    <h3 class="text-2xl font-bold mb-2">Full Master (3 Mois)</h3>
+                    <div class="mb-4">
+                        <span class="text-5xl font-black">60$</span>
+                        <span class="text-blue-200 line-through text-xl ml-2">75$</span>
                     </div>
-                    <p class="text-sm text-blue-200 mb-8">La formation complète de A à Z + Coaching VIP.</p>
+                    <p class="text-blue-200 mb-6">Formation complète A0 → C2</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-2"></i> <span>3 mois
+                                complets</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                            <span>Coaching VIP</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-2"></i> <span>Accès à
+                                vie</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-2"></i>
+                            <span>Certificat</span></li>
+                    </ul>
                     <button onclick="openModal('Full Master', '60$')"
-                        class="mt-auto w-full py-4 rounded-xl bg-green-500 text-white font-bold hover:bg-green-600 shadow-lg transition transform hover:scale-105">
+                        class="w-full py-4 rounded-xl bg-green-500 text-white font-bold hover:bg-green-600 shadow-lg transition transform hover:scale-105">
                         Devenir Bilingue
                     </button>
                 </div>
             </div>
+
+            <div class="mt-12 bg-blue-50 p-6 rounded-xl text-center">
+                <p class="text-gray-700"><strong>Valeur réelle :</strong> 350$ | <strong>Votre prix :</strong> 60$ |
+                    <strong>Économie :</strong> 290$</p>
+            </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-slate-50 scroll-reveal">
+    <!-- FAQ -->
+    <section class="py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">FAQ</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mt-2">Questions Fréquentes</h2>
-                <div class="w-24 h-1 bg-green-500 mx-auto mt-4 rounded-full"></div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-4">Questions Fréquentes</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto rounded-full"></div>
             </div>
 
             <div class="space-y-4">
-                <!-- Question 1 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                    <button onclick="toggleFAQ(1)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="font-bold text-slate-800 pr-4">📱 Ai-je besoin d'un ordinateur pour suivre la
-                            formation ?</span>
-                        <i id="faq-icon-1" class="fas fa-chevron-down text-blue-900 transition-transform"></i>
-                    </button>
-                    <div id="faq-answer-1" class="faq-answer px-6 pb-5">
-                        <p class="text-slate-600">Non ! C'est tout l'avantage de LEA. La méthode est 100% audio et
-                            optimisée pour smartphone. Vous pouvez apprendre en moto-taxi, au marché, ou pendant vos
-                            pauses. Un simple téléphone + écouteurs suffisent.</p>
-                    </div>
-                </div>
+                <details class="bg-white rounded-xl p-6 shadow-sm">
+                    <summary class="font-bold text-gray-900 cursor-pointer">📱 Ai-je besoin d'un ordinateur ?</summary>
+                    <p class="mt-4 text-gray-600">Non. Un simple smartphone suffit. Tout se passe sur Telegram.</p>
+                </details>
 
-                <!-- Question 2 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                    <button onclick="toggleFAQ(2)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="font-bold text-slate-800 pr-4">💰 Comment fonctionne le paiement Mobile Money
-                            ?</span>
-                        <i id="faq-icon-2" class="fas fa-chevron-down text-blue-900 transition-transform"></i>
-                    </button>
-                    <div id="faq-answer-2" class="faq-answer px-6 pb-5">
-                        <p class="text-slate-600">Nous acceptons M-Pesa et Orange Money. Après paiement, envoyez la
-                            preuve via WhatsApp au +243 817 748 941. Vous recevrez vos accès sous 2h maximum (souvent en
-                            30 minutes).</p>
-                    </div>
-                </div>
+                <details class="bg-white rounded-xl p-6 shadow-sm">
+                    <summary class="font-bold text-gray-900 cursor-pointer">⏱️ Combien de temps par jour ?</summary>
+                    <p class="mt-4 text-gray-600">30 min à 1h par jour. La régularité compte plus que la quantité.</p>
+                </details>
 
-                <!-- Question 3 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                    <button onclick="toggleFAQ(3)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="font-bold text-slate-800 pr-4">🛡️ Que signifie "Garantie 7 jours" ?</span>
-                        <i id="faq-icon-3" class="fas fa-chevron-down text-blue-900 transition-transform"></i>
-                    </button>
-                    <div id="faq-answer-3" class="faq-answer px-6 pb-5">
-                        <p class="text-slate-600">Si dans les 7 premiers jours vous n'êtes pas satisfait de la méthode,
-                            nous vous remboursons intégralement. Aucune question posée. C'est notre engagement qualité.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                    <button onclick="toggleFAQ(4)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="font-bold text-slate-800 pr-4">⏱️ Combien de temps par jour dois-je étudier
-                            ?</span>
-                        <i id="faq-icon-4" class="fas fa-chevron-down text-blue-900 transition-transform"></i>
-                    </button>
-                    <div id="faq-answer-4" class="faq-answer px-6 pb-5">
-                        <p class="text-slate-600">Minimum 30 minutes par jour. L'idéal est 1h répartie en 2 sessions
-                            (matin + soir). La méthode audio permet d'apprendre en multitâche : pendant vos trajets, en
-                            cuisinant, etc.</p>
-                    </div>
-                </div>
-
-                <!-- Question 5 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                    <button onclick="toggleFAQ(5)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="font-bold text-slate-800 pr-4">🎓 Vais-je vraiment atteindre le niveau C2 en 90
-                            jours ?</span>
-                        <i id="faq-icon-5" class="fas fa-chevron-down text-blue-900 transition-transform"></i>
-                    </button>
-                    <div id="faq-answer-5" class="faq-answer px-6 pb-5">
-                        <p class="text-slate-600">Le niveau final dépend de votre assiduité. Avec 1h/jour, vous
-                            atteindrez B2-C1 (niveau professionnel). Le C2 nécessite une pratique continue après la
-                            formation. Mais dès le Mois 2, vous serez opérationnel pour travailler en anglais.</p>
-                    </div>
-                </div>
-
-                <!-- Question 6 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                    <button onclick="toggleFAQ(6)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="font-bold text-slate-800 pr-4">👥 Y a-t-il un suivi personnalisé ?</span>
-                        <i id="faq-icon-6" class="fas fa-chevron-down text-blue-900 transition-transform"></i>
-                    </button>
-                    <div id="faq-answer-6" class="faq-answer px-6 pb-5">
-                        <p class="text-slate-600">Oui ! Le pack Full Master inclut un coaching VIP avec sessions de
-                            correction vocale hebdomadaires. Vous avez aussi accès à notre groupe WhatsApp d'entraide
-                            avec les 5 experts.</p>
-                    </div>
-                </div>
-
-                <!-- Question 7 -->
-                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
-                    <button onclick="toggleFAQ(7)"
-                        class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition">
-                        <span class="font-bold text-slate-800 pr-4">🌐 Ai-je besoin d'internet en permanence ?</span>
-                        <i id="faq-icon-7" class="fas fa-chevron-down text-blue-900 transition-transform"></i>
-                    </button>
-                    <div id="faq-answer-7" class="faq-answer px-6 pb-5">
-                        <p class="text-slate-600">Non. Tous les fichiers audio et PDF sont téléchargeables. Une fois
-                            téléchargés, vous pouvez étudier 100% hors ligne. Internet n'est nécessaire que pour
-                            télécharger le contenu initial et accéder au groupe WhatsApp.</p>
-                    </div>
-                </div>
+                <details class="bg-white rounded-xl p-6 shadow-sm">
+                    <summary class="font-bold text-gray-900 cursor-pointer">🛡️ Garantie 7 jours ?</summary>
+                    <p class="mt-4 text-gray-600">Si vous n'êtes pas satisfait dans les 7 jours, nous vous remboursons
+                        intégralement.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-12 px-4 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <h4 class="text-white font-bold text-lg">LEA ACADEMY</h4>
-                <p class="text-sm text-slate-500">Kisangani, République Démocratique du Congo.</p>
-                <p class="text-sm text-slate-500 mt-1">lea-kis@gmail.com</p>
+    <!-- CTA FINAL -->
+    <section class="py-20 gradient-hero">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-black mb-6">Votre Futur Commence Aujourd'hui</h2>
+            <p class="text-xl mb-10">Chaque jour sans anglais est un jour de perdu. Pendant que vous hésitez, d'autres
+                décrochent des postes, négocient avec Dubaï, obtiennent des bourses.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#pricing"
+                    class="gradient-cta text-white text-xl font-bold py-5 px-12 rounded-xl shadow-2xl hover:shadow-green-500/50 transition transform hover:scale-105 inline-flex items-center justify-center">
+                    <i class="fas fa-rocket mr-2"></i> Je M'inscris — Full Master 60$
+                </a>
+                <a href="https://wa.me/243817748941"
+                    class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white text-xl font-semibold py-5 px-12 rounded-xl transition inline-flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> J'ai Une Question
+                </a>
             </div>
-            <div class="flex gap-6">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h4 class="text-white font-bold text-xl mb-2">Learning English Academy (LEA)</h4>
+            <p class="text-sm mb-4">Kisangani, République Démocratique du Congo</p>
+            <p class="text-sm mb-6">📧 lea-kis@gmail.com | 📱 +243 817 748 941</p>
+            <div class="flex justify-center gap-6 mb-6">
                 <a href="#" class="hover:text-white transition"><i class="fab fa-facebook fa-lg"></i></a>
                 <a href="#" class="hover:text-white transition"><i class="fab fa-instagram fa-lg"></i></a>
                 <a href="https://wa.me/243817748941" class="hover:text-green-400 transition"><i
                         class="fab fa-whatsapp fa-lg"></i></a>
             </div>
+            <p class="text-xs text-gray-500">© 2025 LEA Academy. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- Payment Modal -->
-    <div id="paymentModal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
-        aria-modal="true">
-        <!-- Backdrop -->
-        <div class="fixed inset-0 bg-slate-900 bg-opacity-75 transition-opacity backdrop-blur-sm"
-            onclick="closeModal()"></div>
-
-        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-            <div
-                class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div class="bg-blue-900 px-4 py-6 sm:px-6">
-                    <h3 class="text-xl font-bold leading-6 text-white" id="modal-title">Paiement Sécurisé</h3>
-                    <p class="text-blue-200 text-sm mt-1">Pack sélectionné : <span id="modalPackName"
+    <!-- MODAL PAIEMENT -->
+    <div id="paymentModal" class="fixed inset-0 z-50 hidden">
+        <div class="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="flex min-h-full items-center justify-center p-4">
+            <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full">
+                <div class="bg-blue-900 px-6 py-6 rounded-t-2xl">
+                    <h3 class="text-xl font-bold text-white">Paiement Sécurisé</h3>
+                    <p class="text-blue-200 text-sm mt-1">Pack : <span id="modalPackName"
                             class="font-bold text-white"></span></p>
                 </div>
-                <div class="px-4 py-6 sm:px-6">
-                    <p class="text-sm text-slate-600 mb-6">Veuillez effectuer le transfert de <span id="modalPackPrice"
-                            class="font-bold text-blue-900"></span> (ou équivalent CDF) vers l'un des numéros suivants :
-                    </p>
+                <div class="p-6">
+                    <p class="text-sm text-gray-600 mb-6">Transférez <span id="modalPackPrice"
+                            class="font-bold text-blue-900"></span> vers :</p>
 
-                    <!-- M-Pesa -->
-                    <div class="flex items-center p-4 mb-4 rounded-xl border border-yellow-200 bg-yellow-50">
-                        <div
-                            class="h-10 w-10 flex-shrink-0 rounded-full bg-yellow-400 flex items-center justify-center text-white font-bold">
-                            M</div>
-                        <div class="ml-4">
-                            <p class="font-bold text-slate-800">0817 748 941</p>
-                            <p class="text-xs text-slate-500 uppercase">Joël Kitoko</p>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center p-4 rounded-xl border-2 border-yellow-200 bg-yellow-50">
+                            <div
+                                class="h-10 w-10 bg-yellow-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                M</div>
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">0817 748 941</p>
+                                <p class="text-xs text-gray-500">M-Pesa - Joël Kitoko</p>
+                            </div>
+                            <button onclick="copyToClipboard('0817748941')"
+                                class="text-yellow-600 hover:text-yellow-700 text-sm font-semibold">Copier</button>
                         </div>
-                        <button onclick="copyToClipboard('0817748941')"
-                            class="ml-auto text-yellow-600 hover:text-yellow-700 text-sm font-semibold">Copier</button>
-                    </div>
 
-                    <!-- Orange -->
-                    <div class="flex items-center p-4 mb-6 rounded-xl border border-orange-200 bg-orange-50">
-                        <div
-                            class="h-10 w-10 flex-shrink-0 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold">
-                            O</div>
-                        <div class="ml-4">
-                            <p class="font-bold text-slate-800">0830 490 791</p>
-                            <p class="text-xs text-slate-500 uppercase">Emmanuel Mbaruku</p>
+                        <div class="flex items-center p-4 rounded-xl border-2 border-orange-200 bg-orange-50">
+                            <div
+                                class="h-10 w-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                O</div>
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">0830 490 791</p>
+                                <p class="text-xs text-gray-500">Orange Money - Emmanuel Mbaruku</p>
+                            </div>
+                            <button onclick="copyToClipboard('0830490791')"
+                                class="text-orange-600 hover:text-orange-700 text-sm font-semibold">Copier</button>
                         </div>
-                        <button onclick="copyToClipboard('0830490791')"
-                            class="ml-auto text-orange-600 hover:text-orange-700 text-sm font-semibold">Copier</button>
                     </div>
 
-                    <div class="bg-blue-50 rounded-lg p-3 mb-6 text-xs text-blue-800 flex items-start">
-                        <i class="fas fa-info-circle mt-0.5 mr-2"></i>
-                        Une fois le paiement effectué, cliquez ci-dessous pour envoyer la preuve (capture d'écran) via
-                        WhatsApp.
-                    </div>
-
-                    <a href="https://wa.me/243817748941?text=Bonjour,%20je%20viens%20de%20payer%20pour%20la%20formation%20LEA."
+                    <a href="https://wa.me/243817748941?text=Bonjour, je viens de payer pour la formation LEA."
                         target="_blank"
-                        class="block w-full rounded-xl bg-green-600 px-3 py-4 text-sm font-bold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 text-center transition">
+                        class="block w-full rounded-xl bg-green-600 px-4 py-4 text-sm font-bold text-white text-center hover:bg-green-500 transition mb-4">
                         <i class="fab fa-whatsapp mr-2"></i> Envoyer Preuve de Paiement
                     </a>
-                </div>
-                <div class="bg-slate-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                    <button type="button"
-                        class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 sm:mt-0 sm:w-auto"
-                        onclick="closeModal()">Fermer</button>
+
+                    <button onclick="closeModal()"
+                        class="w-full py-3 text-gray-600 hover:text-gray-800 font-semibold">Fermer</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Modal Logic
         function openModal(pack, price) {
             document.getElementById('modalPackName').textContent = pack;
             document.getElementById('modalPackPrice').textContent = price;
@@ -842,194 +495,23 @@
         }
 
         function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function () {
+            navigator.clipboard.writeText(text).then(() => {
                 alert('Numéro copié : ' + text);
-            }, function (err) {
-                console.error('Could not copy text: ', err);
             });
         }
 
-        // Chart.js Configuration for Income Projection
-        document.addEventListener('DOMContentLoaded', function () {
-            const ctx = document.getElementById('incomeChart').getContext('2d');
-
-            // Labels wrapper logic (simple version for dates/years)
-            const labels = ['Année 1', 'Année 2', 'Année 3', 'Année 4', 'Année 5'];
-
-            const data = {
-                labels: labels,
-                datasets: [
-                    {
-                        label: 'Avec Anglais (LEA)',
-                        data: [300, 500, 850, 1200, 1800], // Estimated Growth in USD
-                        borderColor: '#10b981', // Emerald 500
-                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
-                        borderWidth: 3,
-                        tension: 0.4,
-                        fill: true,
-                        pointBackgroundColor: '#fff',
-                        pointBorderColor: '#10b981',
-                        pointRadius: 6
-                    },
-                    {
-                        label: 'Sans Anglais (Local)',
-                        data: [150, 160, 170, 180, 190], // Stagnant growth
-                        borderColor: '#94a3b8', // Slate 400
-                        borderWidth: 2,
-                        borderDash: [5, 5],
-                        tension: 0.4,
-                        fill: false,
-                        pointRadius: 0
-                    }
-                ]
-            };
-
-            const config = {
-                type: 'line',
-                data: data,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                            labels: {
-                                font: { family: "'Inter', sans-serif" }
-                            }
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(15, 23, 42, 0.9)',
-                            titleFont: { family: "'Inter', sans-serif", size: 14 },
-                            bodyFont: { family: "'Inter', sans-serif", size: 13 },
-                            padding: 12,
-                            callbacks: {
-                                // MANDATORY CALLBACK PER INSTRUCTIONS
-                                title: function (tooltipItems) {
-                                    const item = tooltipItems[0];
-                                    let label = item.chart.data.labels[item.dataIndex];
-                                    if (Array.isArray(label)) {
-                                        return label.join(' ');
-                                    } else {
-                                        return label;
-                                    }
-                                },
-                                label: function (context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed.y !== null) {
-                                        label += '$' + context.parsed.y + ' / mois';
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: { color: '#f1f5f9' },
-                            ticks: {
-                                callback: function (value) { return '$' + value; },
-                                font: { family: "'Inter', sans-serif" }
-                            }
-                        },
-                        x: {
-                            grid: { display: false },
-                            ticks: { font: { family: "'Inter', sans-serif" } }
-                        }
-                    },
-                    interaction: {
-                        mode: 'index',
-                        intersect: false,
-                    }
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
-            };
-
-            new Chart(ctx, config);
-
-            // Mobile Menu Toggle
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const menuIcon = document.getElementById('menuIcon');
-            const closeIcon = document.getElementById('closeIcon');
-
-            mobileMenuBtn.addEventListener('click', function () {
-                mobileMenu.classList.toggle('active');
-                menuIcon.classList.toggle('hidden');
-                closeIcon.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when clicking on a link
-            const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    mobileMenu.classList.remove('active');
-                    menuIcon.classList.remove('hidden');
-                    closeIcon.classList.add('hidden');
-                });
-            });
-
-            // Countdown Timer (5 days from now)
-            function updateCountdown() {
-                const deadline = new Date();
-                deadline.setDate(deadline.getDate() + 5);
-                deadline.setHours(23, 59, 59, 999);
-
-                function update() {
-                    const now = new Date().getTime();
-                    const distance = deadline - now;
-
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-                    const countdownEl = document.getElementById('countdown');
-                    if (countdownEl) {
-                        countdownEl.textContent = `${days}j ${hours}h ${minutes}m`;
-                    }
-
-                    if (distance < 0) {
-                        countdownEl.textContent = "FERMÉ";
-                    }
-                }
-
-                update();
-                setInterval(update, 60000); // Update every minute
-            }
-
-            updateCountdown();
-
-            // Scroll Reveal Animation
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.scroll-reveal').forEach(el => {
-                observer.observe(el);
             });
         });
-
-        // FAQ Toggle Function
-        function toggleFAQ(id) {
-            const answer = document.getElementById(`faq-answer-${id}`);
-            const icon = document.getElementById(`faq-icon-${id}`);
-
-            answer.classList.toggle('active');
-            icon.classList.toggle('rotate-180');
-        }
-
     </script>
+
 </body>
 
 </html>
